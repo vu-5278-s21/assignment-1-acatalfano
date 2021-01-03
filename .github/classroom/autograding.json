@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "edu.vanderbilt.cs.live2.GeoHashTest",
+      "setup": "",
+      "run": "gradle test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
