@@ -191,10 +191,6 @@ public class GeoHash {
 
 		String allZeros = "00000";
 		String allOnes = "11111";
-		// If you can get the 1D geohash to pass all of these faux tests, you
-		// should be
-		// in
-		// good shape to complete the 2D version.
 		assertEquals(allZeros, geohashString(LONGITUDE_RANGE[0], LONGITUDE_RANGE, 5));
 		assertEquals(allZeros, geohashString(LATITUDE_RANGE[0], LATITUDE_RANGE, 5));
 		assertEquals(allOnes, geohashString(LONGITUDE_RANGE[1], LONGITUDE_RANGE, 5));
@@ -223,14 +219,12 @@ public class GeoHash {
 			double nextUpperRange = normalizedUpperRange / 2;
 
 			if (normalizedValue >= nextUpperRange) {
-				// @ToDo: RECUR CASE 1
 				partialGeohash = recursiveGeohash1D(
 					normalizedValue - nextUpperRange, nextUpperRange,
 					precision - 1
 				);
 				geohash[0] = true;
 			} else {
-				// @ToDo: RECUR CASE 2
 				partialGeohash = recursiveGeohash1D(
 					normalizedValue, nextUpperRange, precision - 1
 				);
